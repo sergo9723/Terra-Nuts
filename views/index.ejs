@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terra Nuts — орехи и сухофрукты</title>
+  <link rel="icon" href="/logo.svg">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="hero">
+    <img src="/logo.svg" alt="Terra Nuts" class="hero-logo">
+    <h1>Terra Nuts</h1>
+    <p class="tagline">Орехи и сухофрукты в подарочной упаковке</p>
+  </header>
+
+  <main>
+    <% ['nut', 'dried_fruit'].forEach(function(cat) { %>
+      <% if (grouped[cat].length) { %>
+        <section class="category">
+          <h2><%= categoryLabels[cat] %></h2>
+          <div class="grid">
+            <% grouped[cat].forEach(function(p) { %>
+              <article class="card" data-variant-id="<%= p.id %>">
+                <h3><%= p.name %></h3>
+                <p class="weight"><%= p.weight_g %> г</p>
+                <p class="price"><%= p.price %> ₽</p>
+                <p class="stock <%= p.stock_qty > 0 ? 'in-stock' : 'out-of-stock' %>" data-stock>
+                  <% if (p.stock_qty > 0) { %>В наличии: <span class="stock-qty"><%= p.stock_qty %></span> шт<% } else { %>Нет в наличии<% } %>
+                </p>
+                <% if (botConfigured && p.orderLink) { %>
+                  <a class="order-btn <%= p.stock_qty === 0 ? 'disabled' : '' %>"
+                     href="<%= p.stock_qty > 0 ? p.orderLink : '#' %>"
+                     target="_blank" rel="noopener">Заказать</a>
+                <% } else { %>
+                  <span class="order-btn disabled" title="Бот скоро будет подключён">Заказать</span>
+                <% } %>
+              </article>
+            <% }) %>
+          </div>
+        </section>
+      <% } %>
+    <% }) %>
+  </main>
+
+  <footer>
+    <p>Оплата наличными или картой курьеру при получении. Доставка обсуждается с менеджером после оформления заявки в Telegram.</p>
+  </footer>
+
+  <script>
+    // Обновляем остатки без перезагрузки страницы, чтобы витрина не врала,
+    // если кто-то уже заказал последнюю пачку минуту назад.
+    async function refreshStock() {
+      try {
+        const res = await fetch('/api/stock');
+        const stock = await res.json();
+        document.querySelectorAll('.card').forEach((card) => {
+          const id = card.dataset.variantId;
+          if (!(id in stock)) return;
+          const qty = stock[id];
+          const stockEl = card.querySelector('[data-stock]');
+          const btn = card.querySelector('.order-btn');
+          if (qty > 0) {
+            stockEl.textContent = `В наличии: ${qty} шт`;
+            stockEl.className = 'stock in-stock';
+            if (btn) btn.classList.remove('disabled');
+          } else {
+            stockEl.textContent = 'Нет в наличии';
+            stockEl.className = 'stock out-of-stock';
+            if (btn) btn.classList.add('disabled');
+          }
+        });
+      } catch (e) {
+        // тихо игнорируем — цифры на странице просто останутся прежними до следующей попытки
+      }
+    }
+    setInterval(refreshStock, 15000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+<defs>
+  <filter id="soft1"><feGaussianBlur stdDeviation="1.1"/></filter>
+  <filter id="soft2"><feGaussianBlur stdDeviation="2.2"/></filter>
+
+  <radialGradient id="gWalnutShell" cx="34%" cy="28%" r="80%"><stop offset="0%" stop-color="#F0DBAE"/><stop offset="55%" stop-color="#CBA06A"/><stop offset="100%" stop-color="#8F6539"/></radialGradient>
+  <linearGradient id="gKernelA" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#D6A868"/><stop offset="60%" stop-color="#9C6836"/><stop offset="100%" stop-color="#6E441F"/></linearGradient>
+  <linearGradient id="gKernelB" x1="1" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#C49660"/><stop offset="60%" stop-color="#875C2E"/><stop offset="100%" stop-color="#5C3A1A"/></linearGradient>
+  <radialGradient id="gHazel" cx="30%" cy="24%" r="85%"><stop offset="0%" stop-color="#DA9E5E"/><stop offset="50%" stop-color="#A9662F"/><stop offset="100%" stop-color="#6E3E1C"/></radialGradient>
+  <linearGradient id="gCap" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#E4CB9C"/><stop offset="100%" stop-color="#A9855A"/></linearGradient>
+  <radialGradient id="gAlmond" cx="32%" cy="22%" r="85%"><stop offset="0%" stop-color="#E4B26C"/><stop offset="55%" stop-color="#B27B3B"/><stop offset="100%" stop-color="#7C511F"/></radialGradient>
+  <linearGradient id="gCashew" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F3DFB0"/><stop offset="60%" stop-color="#D8AD68"/><stop offset="100%" stop-color="#A97C3E"/></linearGradient>
+  <radialGradient id="gPeanut" cx="32%" cy="22%" r="90%"><stop offset="0%" stop-color="#E7CB98"/><stop offset="55%" stop-color="#C29A5E"/><stop offset="100%" stop-color="#8C6636"/></radialGradient>
+  <linearGradient id="gPistShell" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F8EFD6"/><stop offset="100%" stop-color="#DFC994"/></linearGradient>
+  <linearGradient id="gPistKernel" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9CAE5E"/><stop offset="100%" stop-color="#69763A"/></linearGradient>
+  <linearGradient id="gGoldLeaf" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F3DA9E"/><stop offset="100%" stop-color="#B4863C"/></linearGradient>
+  <linearGradient id="gBerry" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E4795A"/><stop offset="100%" stop-color="#9C3420"/></linearGradient>
+  <radialGradient id="gCoco" cx="35%" cy="30%" r="80%"><stop offset="0%" stop-color="#FBF6E8"/><stop offset="100%" stop-color="#E6D9B8"/></radialGradient>
+  <radialGradient id="gApricot" cx="34%" cy="28%" r="80%"><stop offset="0%" stop-color="#F7D28A"/><stop offset="55%" stop-color="#EDA23F"/><stop offset="100%" stop-color="#B96A1E"/></radialGradient>
+  <radialGradient id="gFigSkin" cx="32%" cy="26%" r="82%"><stop offset="0%" stop-color="#9C5F72"/><stop offset="55%" stop-color="#6B3452"/><stop offset="100%" stop-color="#3E1B30"/></radialGradient>
+  <radialGradient id="gFigFlesh" cx="50%" cy="45%" r="60%"><stop offset="0%" stop-color="#F6D9DE"/><stop offset="100%" stop-color="#E7A9B6"/></radialGradient>
+  <radialGradient id="gCherry" cx="32%" cy="26%" r="85%"><stop offset="0%" stop-color="#F0685C"/><stop offset="55%" stop-color="#C42A2E"/><stop offset="100%" stop-color="#7C121C"/></radialGradient>
+  <linearGradient id="gOrangePeel" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FBB246"/><stop offset="100%" stop-color="#E4802A"/></linearGradient>
+  <linearGradient id="gOrangeSeg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFDA9A"/><stop offset="100%" stop-color="#F7A94A"/></linearGradient>
+  <linearGradient id="gOrangeSeg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFC978"/><stop offset="100%" stop-color="#EE9636"/></linearGradient>
+  <radialGradient id="gGrape" cx="32%" cy="26%" r="90%"><stop offset="0%" stop-color="#B79BCB"/><stop offset="55%" stop-color="#6F4E8C"/><stop offset="100%" stop-color="#3E2A55"/></radialGradient>
+
+  <radialGradient id="vRoyal1" cx="50%" cy="40%" r="72%"><stop offset="0%" stop-color="#8C1F32"/><stop offset="55%" stop-color="#5C1122"/><stop offset="100%" stop-color="#2A0812"/></radialGradient>
+  <radialGradient id="glowGold" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#F0CE8C" stop-opacity="0.30"/><stop offset="100%" stop-color="#F0CE8C" stop-opacity="0"/></radialGradient>
+  <linearGradient id="gGoldText" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FBEBC0"/><stop offset="45%" stop-color="#E3BD73"/><stop offset="100%" stop-color="#AD7F3C"/></linearGradient>
+
+  <g id="icoWalnut">
+    <ellipse cx="31" cy="52" rx="16" ry="4" fill="#000" opacity="0.28" filter="url(#soft2)"/>
+    <path d="M30 6 C14 6 6 20 6 34 C6 48 17 55 30 55 C43 55 54 48 54 34 C54 20 46 6 30 6 Z" fill="url(#gWalnutShell)"/>
+    <path d="M30 13 C21 13 15 21 15 31 C15 41 21 47 28 45 C25 39 26 29 30 25 C28 20 29 16 30 13 Z" fill="url(#gKernelA)"/>
+    <path d="M30 13 C39 13 45 21 45 31 C45 41 39 47 32 45 C35 39 34 29 30 25 C32 20 31 16 30 13 Z" fill="url(#gKernelB)"/>
+    <g stroke="#4A2C13" stroke-width="0.9" fill="none" opacity="0.5">
+      <path d="M30 25 C26 30 26 38 29 44"/><path d="M30 25 C34 30 34 38 31 44"/>
+      <path d="M23 22 C20 27 20 35 22 40"/><path d="M37 22 C40 27 40 35 38 40"/>
+    </g>
+    <ellipse cx="20" cy="18" rx="6" ry="4.5" fill="#fff" opacity="0.35" filter="url(#soft1)"/>
+  </g>
+
+  <g id="icoHazel">
+    <ellipse cx="30" cy="50" rx="13" ry="3.6" fill="#000" opacity="0.3" filter="url(#soft2)"/>
+    <path d="M30 12 C27 12 25 16 26 20 L34 20 C35 16 33 12 30 12 Z" fill="url(#gHazel)"/>
+    <ellipse cx="30" cy="32" rx="17" ry="19" fill="url(#gHazel)"/>
+    <ellipse cx="30" cy="48" rx="13" ry="4.5" fill="url(#gCap)" stroke="#6b4a2a" stroke-width="0.6" opacity="0.9"/>
+    <ellipse cx="23" cy="23" rx="5" ry="7" fill="#fff" opacity="0.4" filter="url(#soft1)"/>
+  </g>
+
+  <g id="icoAlmond">
+    <ellipse cx="30" cy="47" rx="11" ry="3" fill="#000" opacity="0.25" filter="url(#soft2)"/>
+    <path d="M30 7 C41 14 47 27 40 41 C36 51 24 51 20 41 C13 27 19 14 30 7 Z" fill="url(#gAlmond)"/>
+    <circle cx="26" cy="24" r="1.3" fill="#5c3a1a" opacity="0.5"/><circle cx="33" cy="31" r="1.1" fill="#5c3a1a" opacity="0.4"/>
+    <path d="M24 16 C21 24 21 33 26 42" stroke="#fff" stroke-width="2.2" opacity="0.3" fill="none" stroke-linecap="round" filter="url(#soft1)"/>
+  </g>
+
+  <g id="icoCashew">
+    <ellipse cx="26" cy="44" rx="14" ry="3.2" fill="#000" opacity="0.22" filter="url(#soft2)"/>
+    <path d="M20 45 C9 40 7 25 18 15 C26 7 41 9 45 20 C36 17 27 20 25 28 C23 36 30 41 39 38 C35 47 26 49 20 45 Z" fill="url(#gCashew)"/>
+    <path d="M22 40 C14 35 13 25 20 18" stroke="#fff" stroke-width="2.2" opacity="0.4" fill="none" stroke-linecap="round" filter="url(#soft1)"/>
+  </g>
+
+  <g id="icoPeanut">
+    <ellipse cx="30" cy="54" rx="14" ry="3.2" fill="#000" opacity="0.25" filter="url(#soft2)"/>
+    <ellipse cx="30" cy="20" rx="14.5" ry="13.5" fill="url(#gPeanut)"/>
+    <ellipse cx="30" cy="43" rx="15.5" ry="14.5" fill="url(#gPeanut)"/>
+    <ellipse cx="30" cy="31" rx="9" ry="4" fill="#7c5a2e" opacity="0.28" filter="url(#soft1)"/>
+    <g stroke="#7c5528" stroke-width="0.9" opacity="0.45" fill="none">
+      <path d="M18 14 C22 18 22 24 18 28"/><path d="M42 14 C38 18 38 24 42 28"/>
+      <path d="M17 38 C22 42 22 48 17 52"/><path d="M43 38 C38 42 38 48 43 52"/>
+    </g>
+  </g>
+
+  <g id="icoPistachio">
+    <ellipse cx="30" cy="35" rx="15" ry="4" fill="#000" opacity="0.22" filter="url(#soft2)"/>
+    <g transform="rotate(-6 30 27)"><path d="M28 10 C19 10 14 18 14 27 C14 34 18 36 24 34 L24 12 C25 10 27 10 28 10 Z" fill="url(#gPistShell)"/></g>
+    <g transform="rotate(6 30 27)"><path d="M32 10 C41 10 46 18 46 27 C46 34 42 36 36 34 L36 12 C35 10 33 10 32 10 Z" fill="url(#gPistShell)"/></g>
+    <ellipse cx="30" cy="24" rx="4.2" ry="10" fill="url(#gPistKernel)"/>
+  </g>
+
+  <g id="icoCoconut">
+    <ellipse cx="28" cy="48" rx="17" ry="4" fill="#000" opacity="0.2" filter="url(#soft2)"/>
+    <path d="M12 30 C12 16 22 8 34 10 C28 14 24 22 26 32 C28 42 36 48 46 46 C40 54 26 54 18 46 C13 41 12 36 12 30 Z" fill="url(#gCoco)" stroke="#C9B98F" stroke-width="1"/>
+    <path d="M34 10 C36 10 38 11 39 12" stroke="#8a5a2e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <g id="icoSprig">
+    <path d="M30 40 L30 14" stroke="#B4863C" stroke-width="1.3" fill="none"/>
+    <path d="M30 14 C40 8 48 14 46 22 C40 20 34 18 30 14 Z" fill="url(#gGoldLeaf)"/>
+    <path d="M30 22 C22 20 14 26 17 33 C24 30 28 27 30 22 Z" fill="url(#gGoldLeaf)"/>
+    <path d="M30 26 C38 25 45 30 43 37 C37 34 32 31 30 26 Z" fill="url(#gGoldLeaf)"/>
+  </g>
+
+  <g id="icoWheat">
+    <path d="M30 50 L30 10" stroke="#B4863C" stroke-width="1.2" fill="none"/>
+    <g fill="url(#gGoldLeaf)">
+      <ellipse cx="26" cy="16" rx="4.2" ry="6.5" transform="rotate(-25 26 16)"/><ellipse cx="34" cy="16" rx="4.2" ry="6.5" transform="rotate(25 34 16)"/>
+      <ellipse cx="25" cy="26" rx="4.2" ry="6.5" transform="rotate(-25 25 26)"/><ellipse cx="35" cy="26" rx="4.2" ry="6.5" transform="rotate(25 35 26)"/>
+      <ellipse cx="25.5" cy="36" rx="4" ry="6" transform="rotate(-22 25.5 36)"/><ellipse cx="34.5" cy="36" rx="4" ry="6" transform="rotate(22 34.5 36)"/>
+      <ellipse cx="30" cy="8" rx="3.4" ry="5.4"/>
+    </g>
+  </g>
+
+  <g id="icoBerry">
+    <circle cx="24" cy="30" r="6.5" fill="url(#gBerry)"/><circle cx="36" cy="28" r="6" fill="url(#gBerry)"/><circle cx="30" cy="38" r="6.2" fill="url(#gBerry)"/>
+    <circle cx="21.5" cy="27.5" r="1.6" fill="#fff" opacity="0.5"/><circle cx="33.5" cy="25.5" r="1.4" fill="#fff" opacity="0.5"/>
+    <path d="M28 20 C30 16 34 16 35 19" stroke="#55642E" stroke-width="1.4" fill="none"/>
+  </g>
+
+  <g id="icoApricot">
+    <ellipse cx="30" cy="52" rx="15" ry="3.6" fill="#000" opacity="0.22" filter="url(#soft2)"/>
+    <path d="M30 9 C41 9 48 18 48 29 C48 42 40 51 30 51 C20 51 12 42 12 29 C12 18 19 9 30 9 Z" fill="url(#gApricot)"/>
+    <path d="M30 13 C29 20 29 40 30 47" stroke="#B96A1E" stroke-width="1.2" opacity="0.45" fill="none"/>
+    <ellipse cx="21" cy="19" rx="6" ry="4.5" fill="#fff" opacity="0.35" filter="url(#soft1)"/>
+  </g>
+
+  <g id="icoFig">
+    <ellipse cx="30" cy="52" rx="16" ry="3.6" fill="#000" opacity="0.22" filter="url(#soft2)"/>
+    <path d="M30 8 C42 8 50 18 50 30 C50 43 41 52 30 52 C19 52 10 43 10 30 C10 18 18 8 30 8 Z" fill="url(#gFigSkin)"/>
+    <circle cx="30" cy="30" r="15" fill="url(#gFigFlesh)"/>
+    <g fill="#C43B54">
+      <circle cx="30" cy="30" r="1.4"/><circle cx="26" cy="25" r="1.1"/><circle cx="34" cy="25" r="1.1"/><circle cx="23" cy="30" r="1.1"/><circle cx="37" cy="30" r="1.1"/>
+      <circle cx="26" cy="35" r="1.1"/><circle cx="34" cy="35" r="1.1"/><circle cx="30" cy="21" r="1"/><circle cx="30" cy="39" r="1"/>
+    </g>
+    <path d="M27 9 C28 7 32 7 33 9" stroke="#6b3452" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <g id="icoCherry">
+    <ellipse cx="30" cy="52" rx="15" ry="3.4" fill="#000" opacity="0.22" filter="url(#soft2)"/>
+    <path d="M22 20 C20 14 22 9 26 7" stroke="#5C7A32" stroke-width="1.6" fill="none"/>
+    <path d="M38 20 C41 13 39 8 35 6" stroke="#5C7A32" stroke-width="1.6" fill="none"/>
+    <path d="M28 10 C31 6 36 6 37 10 C33 11 30 11 28 10 Z" fill="#5C7A32"/>
+    <circle cx="21" cy="34" r="14" fill="url(#gCherry)"/><circle cx="39" cy="32" r="13" fill="url(#gCherry)"/>
+    <ellipse cx="16" cy="27" rx="4" ry="3" fill="#fff" opacity="0.4" filter="url(#soft1)"/>
+  </g>
+
+  <g id="icoOrangeSlice">
+    <ellipse cx="30" cy="52" rx="15" ry="3.4" fill="#000" opacity="0.2" filter="url(#soft2)"/>
+    <circle cx="30" cy="30" r="21" fill="url(#gOrangePeel)"/>
+    <circle cx="30" cy="30" r="18" fill="#fff8ec"/>
+    <path d="M30 12 A18 18 0 0 1 45.6 39 L30 30 Z" fill="url(#gOrangeSeg1)"/>
+    <path d="M45.6 39 A18 18 0 0 1 14.4 39 L30 30 Z" fill="url(#gOrangeSeg2)"/>
+    <path d="M14.4 39 A18 18 0 0 1 30 12 L30 30 Z" fill="url(#gOrangeSeg1)"/>
+    <circle cx="30" cy="30" r="3.4" fill="#fff8ec"/>
+    <circle cx="30" cy="30" r="21" fill="none" stroke="#B9601C" stroke-width="1.4"/>
+  </g>
+
+  <g id="icoGrape">
+    <ellipse cx="30" cy="52" rx="15" ry="3.4" fill="#000" opacity="0.22" filter="url(#soft2)"/>
+    <path d="M30 12 C31 8 36 6 39 9" stroke="#5C7A32" stroke-width="1.4" fill="none"/>
+    <g fill="url(#gGrape)">
+      <circle cx="30" cy="18" r="7.5"/><circle cx="21" cy="27" r="7.5"/><circle cx="39" cy="27" r="7.5"/><circle cx="30" cy="32" r="7.5"/>
+      <circle cx="16" cy="40" r="7"/><circle cx="30" cy="45" r="7"/><circle cx="44" cy="40" r="7"/>
+    </g>
+    <g fill="#fff" opacity="0.3"><circle cx="27" cy="15" r="1.6"/><circle cx="18" cy="24" r="1.5"/><circle cx="36" cy="24" r="1.5"/></g>
+  </g>
+
+  <g id="icoCrown">
+    <path d="M10 40 L10 20 L24 31 L30 8 L36 31 L50 20 L50 40 Z" fill="url(#gGoldText)" stroke="#7A5522" stroke-width="1"/>
+    <rect x="8" y="40" width="44" height="7" rx="1.5" fill="url(#gGoldText)" stroke="#7A5522" stroke-width="1"/>
+    <circle cx="10" cy="20" r="2.6" fill="#F0685C"/>
+    <circle cx="30" cy="8" r="3" fill="#8C1F32"/>
+    <circle cx="50" cy="20" r="2.6" fill="#F0685C"/>
+    <circle cx="30" cy="43.5" r="2.2" fill="#6F4E8C"/>
+  </g>
+
+  <g id="royalWreath">
+    <use href="#icoHazel" transform="translate(742.8,405.5) scale(0.91) rotate(7.0 30 30)"/>
+    <use href="#icoCashew" transform="translate(717.0,530.6) scale(0.88) rotate(19.7 30 30)"/>
+    <use href="#icoCoconut" transform="translate(632.9,650.6) scale(0.85) rotate(8.3 30 30)"/>
+    <use href="#icoHazel" transform="translate(522.6,718.6) scale(0.97) rotate(-7.7 30 30)"/>
+    <use href="#icoPeanut" transform="translate(385.0,734.4) scale(1.01) rotate(-21.8 30 30)"/>
+    <use href="#icoWalnut" transform="translate(254.5,710.0) scale(1.0) rotate(-8.1 30 30)"/>
+    <use href="#icoCashew" transform="translate(160.5,633.0) scale(0.85) rotate(13.7 30 30)"/>
+    <use href="#icoApricot" transform="translate(77.6,520.3) scale(0.87) rotate(5.8 30 30)"/>
+    <use href="#icoWheat" transform="translate(56.9,415.9) scale(0.84) rotate(-3.9 30 30)"/>
+    <use href="#icoCherry" transform="translate(88.4,254.1) scale(0.87) rotate(18.9 30 30)"/>
+    <use href="#icoHazel" transform="translate(160.1,151.9) scale(0.93) rotate(14.0 30 30)"/>
+    <use href="#icoOrangeSlice" transform="translate(273.2,81.7) scale(0.93) rotate(9.8 30 30)"/>
+    <use href="#icoCherry" transform="translate(385.0,64.2) scale(0.88) rotate(12.0 30 30)"/>
+    <use href="#icoCoconut" transform="translate(531.0,87.1) scale(0.96) rotate(-18.8 30 30)"/>
+    <use href="#icoAlmond" transform="translate(650.0,169.3) scale(0.85) rotate(-15.9 30 30)"/>
+    <use href="#icoHazel" transform="translate(718.0,273.8) scale(0.85) rotate(-9.3 30 30)"/>
+    <use href="#icoSprig" transform="translate(691.4,407.2) scale(0.72) rotate(-2.3 30 30)"/>
+    <use href="#icoPeanut" transform="translate(659.6,530.8) scale(0.68) rotate(0.6 30 30)"/>
+    <use href="#icoPeanut" transform="translate(595.8,618.4) scale(0.7) rotate(-16.6 30 30)"/>
+    <use href="#icoWalnut" transform="translate(474.1,681.0) scale(0.69) rotate(10.5 30 30)"/>
+    <use href="#icoCherry" transform="translate(345.6,688.8) scale(0.79) rotate(11.9 30 30)"/>
+    <use href="#icoApricot" transform="translate(212.4,624.8) scale(0.8) rotate(-21.0 30 30)"/>
+    <use href="#icoSprig" transform="translate(130.4,508.3) scale(0.79) rotate(-18.5 30 30)"/>
+    <use href="#icoGrape" transform="translate(107.9,397.1) scale(0.66) rotate(-11.7 30 30)"/>
+    <use href="#icoGrape" transform="translate(137.7,275.2) scale(0.83) rotate(7.5 30 30)"/>
+    <use href="#icoBerry" transform="translate(210.5,178.9) scale(0.77) rotate(-23.5 30 30)"/>
+    <use href="#icoPistachio" transform="translate(352.2,106.6) scale(0.83) rotate(15.4 30 30)"/>
+    <use href="#icoPistachio" transform="translate(467.5,111.9) scale(0.82) rotate(-7.6 30 30)"/>
+    <use href="#icoOrangeSlice" transform="translate(602.3,177.4) scale(0.71) rotate(13.5 30 30)"/>
+    <use href="#icoWalnut" transform="translate(662.5,269.5) scale(0.72) rotate(24.6 30 30)"/>
+    <use href="#icoSprig" transform="translate(648.7,393.9) scale(0.51) rotate(-20.2 30 30)"/>
+    <use href="#icoAlmond" transform="translate(616.6,517.0) scale(0.55) rotate(2.8 30 30)"/>
+    <use href="#icoWheat" transform="translate(535.7,605.7) scale(0.53) rotate(24.7 30 30)"/>
+    <use href="#icoAlmond" transform="translate(394.4,654.5) scale(0.55) rotate(-19.6 30 30)"/>
+    <use href="#icoPeanut" transform="translate(290.6,621.9) scale(0.56) rotate(-2.7 30 30)"/>
+    <use href="#icoHazel" transform="translate(174.1,515.9) scale(0.54) rotate(14.2 30 30)"/>
+    <use href="#icoPistachio" transform="translate(147.9,419.8) scale(0.53) rotate(5.4 30 30)"/>
+    <use href="#icoCherry" transform="translate(191.0,268.9) scale(0.58) rotate(-13.4 30 30)"/>
+    <use href="#icoGrape" transform="translate(258.9,184.5) scale(0.5) rotate(-6.4 30 30)"/>
+    <use href="#icoBerry" transform="translate(411.0,144.3) scale(0.52) rotate(5.8 30 30)"/>
+    <use href="#icoHazel" transform="translate(532.6,191.8) scale(0.48) rotate(22.5 30 30)"/>
+    <use href="#icoBerry" transform="translate(609.1,259.2) scale(0.52) rotate(-22.8 30 30)"/>
+  </g>
+</defs>
+
+<circle cx="400" cy="400" r="392" fill="url(#vRoyal1)"/>
+<circle cx="400" cy="400" r="378" fill="none" stroke="#E3BD73" stroke-width="3"/>
+<circle cx="400" cy="400" r="366" fill="none" stroke="#E3BD73" stroke-width="1" stroke-dasharray="1.5 7" opacity="0.85"/>
+<circle cx="400" cy="400" r="392" fill="none" stroke="#AD7F3C" stroke-width="1.5"/>
+<g transform="translate(400,22) rotate(45)"><rect x="-6" y="-6" width="12" height="12" fill="#E3BD73"/></g>
+<g transform="translate(400,778) rotate(45)"><rect x="-6" y="-6" width="12" height="12" fill="#E3BD73"/></g>
+<g transform="translate(22,400) rotate(45)"><rect x="-6" y="-6" width="12" height="12" fill="#E3BD73"/></g>
+<g transform="translate(778,400) rotate(45)"><rect x="-6" y="-6" width="12" height="12" fill="#E3BD73"/></g>
+<use href="#royalWreath"/>
+<circle cx="400" cy="400" r="230" fill="url(#glowGold)"/>
+<use href="#icoCrown" transform="translate(370,262) scale(0.85)"/>
+<path d="M280 320 Q400 292 520 320" stroke="#E3BD73" stroke-width="2" fill="none"/>
+<text x="401" y="416" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="70" letter-spacing="7" fill="#3A0B12">TERRA</text>
+<text x="400" y="414" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="70" letter-spacing="7" fill="url(#gGoldText)">TERRA</text>
+<text x="401" y="474" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="46" letter-spacing="9" fill="#3A0B12">NUTS</text>
+<text x="400" y="472" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="46" letter-spacing="9" fill="url(#gGoldText)">NUTS</text>
+<path d="M310 500 Q400 520 490 500" stroke="#E3BD73" stroke-width="1" fill="none" opacity="0.85"/>
+<text x="400" y="534" text-anchor="middle" font-family="'Avenir Next',sans-serif" font-size="12.5" letter-spacing="3" fill="#E3BD73">NUTS &amp; DRIED FRUIT</text>
+<path d="M300 556 L300 576 L500 576 L500 556 L470 568 L400 556 L330 568 Z" fill="#AD7F3C"/>
+<text x="400" y="571" text-anchor="middle" font-family="Georgia, serif" font-size="11" letter-spacing="0.5" fill="#2A0812">ROYAL RESERVE BLEND</text>
+</svg>

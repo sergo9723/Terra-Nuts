@@ -1,0 +1,135 @@
+:root {
+  --bottle: #5C1122;
+  --bottle-deep: #2A0812;
+  --gold: #E3BD73;
+  --gold-deep: #AD7F3C;
+  --cream: #F6EEDC;
+  --paper: #EFE6D2;
+  --ink: #241A12;
+  --ok: #2F6B3A;
+  --err: #A5342A;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, 'Iowan Old Style', 'Palatino Linotype', serif;
+}
+
+.hero {
+  background: radial-gradient(120% 140% at 50% 0%, var(--bottle) 0%, var(--bottle-deep) 100%);
+  color: var(--cream);
+  text-align: center;
+  padding: 28px 20px 40px;
+}
+
+.hero-logo { width: 120px; height: 120px; display: block; margin: 0 auto 12px; }
+
+.hero h1 {
+  margin: 0;
+  font-size: 34px;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+}
+
+.tagline {
+  margin: 8px 0 0;
+  font-family: 'Avenir Next', 'Century Gothic', 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+}
+
+main { max-width: 1080px; margin: 0 auto; padding: 32px 20px 8px; }
+
+.category h2 {
+  font-size: 22px;
+  color: var(--bottle);
+  border-bottom: 1.5px solid var(--gold-deep);
+  padding-bottom: 8px;
+  margin: 0 0 20px;
+}
+
+.category + .category { margin-top: 40px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--cream);
+  border: 1px solid color-mix(in srgb, var(--bottle) 18%, transparent);
+  border-radius: 14px;
+  padding: 18px 16px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(42, 8, 18, 0.08);
+}
+
+.card h3 {
+  margin: 0 0 4px;
+  font-size: 17px;
+  color: var(--ink);
+}
+
+.card .weight {
+  margin: 0 0 8px;
+  font-family: 'Avenir Next', system-ui, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.card .price {
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--bottle);
+}
+
+.card .stock {
+  margin: 0 0 14px;
+  font-family: 'Avenir Next', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.stock.in-stock { color: var(--ok); }
+.stock.out-of-stock { color: var(--err); }
+
+.order-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 10px;
+  background: var(--bottle);
+  color: var(--gold);
+  font-family: 'Avenir Next', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.order-btn.disabled {
+  background: #cfc3ae;
+  color: #7a715f;
+  pointer-events: none;
+}
+
+footer {
+  max-width: 1080px;
+  margin: 40px auto 0;
+  padding: 20px;
+  font-family: 'Avenir Next', system-ui, sans-serif;
+  font-size: 13px;
+  text-align: center;
+  color: color-mix(in srgb, var(--ink) 70%, transparent);
+  border-top: 1px solid color-mix(in srgb, var(--bottle) 14%, transparent);
+}

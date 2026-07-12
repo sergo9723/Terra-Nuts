@@ -1,0 +1,20 @@
+{
+  "name": "terra-nuts",
+  "version": "1.0.0",
+  "description": "Terra Nuts — сайт-витрина, учёт остатков и Telegram-боты для приёма заказов",
+  "private": true,
+  "type": "commonjs",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "seed": "node src/seed.js",
+    "pricing": "node src/pricing-report.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "telegraf": "^4.16.3"
+  }
+}
