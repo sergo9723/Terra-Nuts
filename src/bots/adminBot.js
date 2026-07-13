@@ -107,14 +107,30 @@ function launch() {
 
   bot.action(/^approve_(\d+)$/, async (ctx) => {
     const orderId = Number(ctx.match[1]);
+
+    // Списание остатка — отдельно от уведомления клиента: если уведомление
+    // не дойдёт (например, неверный ADMIN_CHAT_ID или клиент не запускал бота),
+    // заказ всё равно должен остаться подтверждённым и остаток — списанным.
+    let order;
     try {
-      const order = queries.approveOrder(orderId);
-      await ctx.answerCbQuery('Заказ подтверждён');
-      await ctx.editMessageText(`${ctx.callbackQuery.message.text}\n\n✅ ПОДТВЕРЖДЁН`);
-      await notifyOrderApproved(order);
+      order = queries.approveOrder(orderId);
     } catch (err) {
       await ctx.answerCbQuery('Ошибка');
       await ctx.reply(`Не удалось подтвердить заказ №${orderId}: ${err.message}`);
+      return;
+    }
+
+    await ctx.answerCbQuery('Заказ подтверждён');
+    await ctx.editMessageText(`${ctx.callbackQuery.message.text}\n\n✅ ПОДТВЕРЖДЁН`);
+
+    try {
+      await notifyOrderApproved(order);
+    } catch (err) {
+      console.error(`Заказ №${orderId} подтверждён, но клиент не уведомлён:`, err.message);
+      await ctx.reply(
+        `Заказ №${orderId} подтверждён и списан со склада, но клиенту не удалось отправить уведомление в Telegram. ` +
+          `Свяжитесь с ним по телефону ${order.phone}.`
+      );
     }
   });
 
@@ -123,7 +139,13 @@ function launch() {
     const order = queries.rejectOrder(orderId);
     await ctx.answerCbQuery('Заказ отклонён');
     await ctx.editMessageText(`${ctx.callbackQuery.message.text}\n\n❌ ОТКЛОНЁН`);
-    if (order) await notifyOrderRejected(order);
+    if (order) {
+      try {
+        await notifyOrderRejected(order);
+      } catch (err) {
+        console.error(`Заказ №${orderId} отклонён, но клиент не уведомлён:`, err.message);
+      }
+    }
   });
 
   bot.launch();

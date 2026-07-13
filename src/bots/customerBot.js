@@ -83,7 +83,16 @@ function launch() {
       `Спасибо! Ваша заявка №${orderId} принята.\n` +
         'Мы свяжемся с вами после подтверждения менеджером — обычно это занимает немного времени.'
     );
-    await notifyNewOrder(queries.getOrder(orderId));
+
+    // Заказ уже сохранён в БД к этому моменту — даже если уведомление админу
+    // не дойдёт (неверный ADMIN_CHAT_ID, сеть и т.п.), заявка не потеряется,
+    // и сервер не должен из-за этого падать. /orders в админ-боте всё равно
+    // покажет её.
+    try {
+      await notifyNewOrder(queries.getOrder(orderId));
+    } catch (err) {
+      console.error(`Не удалось уведомить админа о заказе №${orderId}:`, err.message);
+    }
   });
 
   bot.action('confirm_no', (ctx) => {

@@ -3,6 +3,17 @@ const path = require('path');
 const express = require('express');
 const createSiteRouter = require('./routes/site');
 
+// Страховка: сайт и оба бота держат заказы и деньги реального бизнеса,
+// поэтому один неучтённый сбой (например, недоступность Telegram API) не
+// должен ронять весь процесс. Каждая точка, где такое реально может
+// произойти, уже обёрнута в try/catch в бот-хендлерах; это — запасной слой.
+process.on('unhandledRejection', (err) => {
+  console.error('Необработанная ошибка (процесс продолжает работу):', err);
+});
+process.on('uncaughtException', (err) => {
+  console.error('Необработанное исключение (процесс продолжает работу):', err);
+});
+
 require('./seed').seed();
 
 const app = express();
